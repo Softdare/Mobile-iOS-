@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		266D8FB9282957F7009B8792 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266D8FB8282957F7009B8792 /* AppDelegate.swift */; };
 		266D8FBB282957F7009B8792 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266D8FBA282957F7009B8792 /* SceneDelegate.swift */; };
-		266D8FBD282957F7009B8792 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266D8FBC282957F7009B8792 /* LoginViewController.swift */; };
+		266D8FBD282957F7009B8792 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266D8FBC282957F7009B8792 /* SignInViewController.swift */; };
 		266D8FC0282957F7009B8792 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 266D8FBE282957F7009B8792 /* Main.storyboard */; };
 		266D8FC2282957F9009B8792 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 266D8FC1282957F9009B8792 /* Assets.xcassets */; };
 		266D8FC5282957F9009B8792 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 266D8FC3282957F9009B8792 /* LaunchScreen.storyboard */; };
@@ -17,6 +17,9 @@
 		266D8FDA282957FA009B8792 /* SoftdareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266D8FD9282957FA009B8792 /* SoftdareUITests.swift */; };
 		266D8FDC282957FA009B8792 /* SoftdareUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266D8FDB282957FA009B8792 /* SoftdareUITestsLaunchTests.swift */; };
 		266D8FED28295D7F009B8792 /* ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266D8FEC28295D7F009B8792 /* ObservableObject.swift */; };
+		266D8FEF28296065009B8792 /* LoginCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266D8FEE28296065009B8792 /* LoginCredentials.swift */; };
+		266D8FF1282960D6009B8792 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266D8FF0282960D6009B8792 /* NetworkService.swift */; };
+		266D8FF4282961D6009B8792 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266D8FF3282961D6009B8792 /* SignInViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +43,7 @@
 		266D8FB5282957F7009B8792 /* Softdare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Softdare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		266D8FB8282957F7009B8792 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		266D8FBA282957F7009B8792 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		266D8FBC282957F7009B8792 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		266D8FBC282957F7009B8792 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		266D8FBF282957F7009B8792 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		266D8FC1282957F9009B8792 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		266D8FC4282957F9009B8792 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +54,9 @@
 		266D8FD9282957FA009B8792 /* SoftdareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftdareUITests.swift; sourceTree = "<group>"; };
 		266D8FDB282957FA009B8792 /* SoftdareUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftdareUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		266D8FEC28295D7F009B8792 /* ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObject.swift; sourceTree = "<group>"; };
+		266D8FEE28296065009B8792 /* LoginCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredentials.swift; sourceTree = "<group>"; };
+		266D8FF0282960D6009B8792 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		266D8FF3282961D6009B8792 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 		266D8FB7282957F7009B8792 /* Softdare */ = {
 			isa = PBXGroup;
 			children = (
+				266D8FF0282960D6009B8792 /* NetworkService.swift */,
 				266D8FE928295965009B8792 /* Login */,
 				266D8FE828295813009B8792 /* Supporting Files */,
 				266D8FBE282957F7009B8792 /* Main.storyboard */,
@@ -141,9 +148,19 @@
 		266D8FE928295965009B8792 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				266D8FBC282957F7009B8792 /* LoginViewController.swift */,
+				266D8FF2282961B4009B8792 /* SignInView */,
+				266D8FEE28296065009B8792 /* LoginCredentials.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		266D8FF2282961B4009B8792 /* SignInView */ = {
+			isa = PBXGroup;
+			children = (
+				266D8FBC282957F7009B8792 /* SignInViewController.swift */,
+				266D8FF3282961D6009B8792 /* SignInViewModel.swift */,
+			);
+			path = SignInView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,7 +294,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				266D8FBD282957F7009B8792 /* LoginViewController.swift in Sources */,
+				266D8FBD282957F7009B8792 /* SignInViewController.swift in Sources */,
+				266D8FF4282961D6009B8792 /* SignInViewModel.swift in Sources */,
+				266D8FF1282960D6009B8792 /* NetworkService.swift in Sources */,
+				266D8FEF28296065009B8792 /* LoginCredentials.swift in Sources */,
 				266D8FED28295D7F009B8792 /* ObservableObject.swift in Sources */,
 				266D8FB9282957F7009B8792 /* AppDelegate.swift in Sources */,
 				266D8FBB282957F7009B8792 /* SceneDelegate.swift in Sources */,
