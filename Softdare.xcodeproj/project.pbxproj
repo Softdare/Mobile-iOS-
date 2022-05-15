@@ -18,8 +18,9 @@
 		266D8FDC282957FA009B8792 /* SoftdareUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266D8FDB282957FA009B8792 /* SoftdareUITestsLaunchTests.swift */; };
 		266D8FED28295D7F009B8792 /* ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266D8FEC28295D7F009B8792 /* ObservableObject.swift */; };
 		266D8FEF28296065009B8792 /* LoginCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266D8FEE28296065009B8792 /* LoginCredentials.swift */; };
-		266D8FF1282960D6009B8792 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266D8FF0282960D6009B8792 /* NetworkService.swift */; };
+		266D8FF1282960D6009B8792 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266D8FF0282960D6009B8792 /* LoginService.swift */; };
 		266D8FF4282961D6009B8792 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266D8FF3282961D6009B8792 /* SignInViewModel.swift */; };
+		26DA3BCB282E774200CB1D9F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DA3BCA282E774200CB1D9F /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +56,9 @@
 		266D8FDB282957FA009B8792 /* SoftdareUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftdareUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		266D8FEC28295D7F009B8792 /* ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObject.swift; sourceTree = "<group>"; };
 		266D8FEE28296065009B8792 /* LoginCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredentials.swift; sourceTree = "<group>"; };
-		266D8FF0282960D6009B8792 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		266D8FF0282960D6009B8792 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		266D8FF3282961D6009B8792 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		26DA3BCA282E774200CB1D9F /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,11 +109,11 @@
 		266D8FB7282957F7009B8792 /* Softdare */ = {
 			isa = PBXGroup;
 			children = (
-				266D8FF0282960D6009B8792 /* NetworkService.swift */,
 				266D8FE928295965009B8792 /* Login */,
 				266D8FE828295813009B8792 /* Supporting Files */,
 				266D8FBE282957F7009B8792 /* Main.storyboard */,
 				266D8FEC28295D7F009B8792 /* ObservableObject.swift */,
+				26DA3BCA282E774200CB1D9F /* NetworkService.swift */,
 			);
 			path = Softdare;
 			sourceTree = "<group>";
@@ -148,6 +150,7 @@
 		266D8FE928295965009B8792 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				266D8FF0282960D6009B8792 /* LoginService.swift */,
 				266D8FF2282961B4009B8792 /* SignInView */,
 				266D8FEE28296065009B8792 /* LoginCredentials.swift */,
 			);
@@ -296,7 +299,8 @@
 			files = (
 				266D8FBD282957F7009B8792 /* SignInViewController.swift in Sources */,
 				266D8FF4282961D6009B8792 /* SignInViewModel.swift in Sources */,
-				266D8FF1282960D6009B8792 /* NetworkService.swift in Sources */,
+				26DA3BCB282E774200CB1D9F /* NetworkService.swift in Sources */,
+				266D8FF1282960D6009B8792 /* LoginService.swift in Sources */,
 				266D8FEF28296065009B8792 /* LoginCredentials.swift in Sources */,
 				266D8FED28295D7F009B8792 /* ObservableObject.swift in Sources */,
 				266D8FB9282957F7009B8792 /* AppDelegate.swift in Sources */,

@@ -8,7 +8,12 @@
 import Foundation
 
 struct SignInCredentials {
-    var username : String? = nil
-    var password : String = ""
+    var username: String? = nil
+    var password: String = ""
     var email : String? = nil
+}
+
+struct SignInResponse : Codable {
+    var success: Bool = false
+    var error: String? = nil
 }

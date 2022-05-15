@@ -1,36 +1,70 @@
 //
-//  LoginService.swift
+//  NetworkService.swift
 //  Softdare
 //
-//  Created by Nazif Enes Kızılcin on 9.05.2022.
+//  Created by Nazif Enes Kızılcin on 13.05.2022.
 //
 
 import Foundation
 
+enum HTTPMethods: String {
+    case get, head, post, put, delete, connect, options, trace, patch
+}
 
-final class NetworkService {
-    // TODO: Initalize the api connection data, or any client declaration
-    
-    // TODO: SignIn And SignUP Functions
-    
-    // SignIn
-    static func signIn(credentials : SignInCredentials) -> Bool {
-        if let email = credentials.email {
-            return signIn(email: email, password: credentials.password)
-        }
-        return signIn(username: credentials.username!, password: credentials.password)
+extension URLSession {
+    enum CustomError: Error {
+        case invalidUrl
+        case invalidData
     }
-    private static func signIn(email: String, password: String) -> Bool {
-        if email == "me@com" && password == "me" {
-            return true
+    func get<T: Codable>(url: URL?, expecting: T.Type, completion: @escaping (Result<T,Error>) -> Void ) {
+        guard let url = url else {
+            completion(.failure(CustomError.invalidUrl))
+            return
         }
-        return false
-    }
-    private static func signIn(username: String, password: String) -> Bool{
-        if username == "me" && password == "me" {
-            return true
+        let task = dataTask(with: url) { data, _, error in
+            guard data != nil else {
+                if let error = error {
+                    completion(.failure(error))
+                }else {
+                    completion(.failure(CustomError.invalidData))
+                }
+                return
+            }
+            do {
+                let result = try JSONDecoder().decode(expecting, from: data!)
+                completion(.success(result))
+            } catch {
+                completion(.failure(error))
+            }
         }
-        return false
+        task.resume()
     }
-    // SignUp
+    func post<T: Codable,E>(url: URL?,data: E, expecting: T.Type, completion: @escaping (Result<T,Error>) -> Void ) {
+        guard let url = url else {
+            completion(.failure(CustomError.invalidUrl))
+            return
+        }
+        var request = URLRequest(url: url)
+        request.httpMethod = HTTPMethods.get.rawValue
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = try? JSONSerialization.data(withJSONObject: data, options: .fragmentsAllowed)
+        
+        let task = dataTask(with: url) { data, _, error in
+            guard data != nil else {
+                if let error = error {
+                    completion(.failure(error))
+                }else {
+                    completion(.failure(CustomError.invalidData))
+                }
+                return
+            }
+            do {
+                let result = try JSONDecoder().decode(expecting, from: data!)
+                completion(.success(result))
+            } catch {
+                completion(.failure(error))
+            }
+        }
+        task.resume()
+    }
 }
